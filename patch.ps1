@@ -68,20 +68,8 @@ if (-not (Test-Path $backupPath)) {
 #
 Apply-Patch `
     -Name "ChromaDB" `
-    -Pattern 'this\.currentGameChromaInfo=tt,this\.currentGameChromaInfo\?\.nvidiaTech\?\.FREESTYLE' `
-    -Replacement 'this.currentGameChromaInfo=tt,tt?.nvidiaTech&&(tt.nvidiaTech.FREESTYLE=!0),this.currentGameChromaInfo?.nvidiaTech?.FREESTYLE'
-
-# Risky patch, this will override what the driver store returns and essentially enable freestyle support for every application.
-# Uncomment only if you know what you're doing.
-# In a normal system, this will return false in these scenarios:
-#   The game has a mutex named 'NVIDIA/FreeStyleDisallow/{..}' in which case it means the game developers blacklisted freestyle explicitly.
-#   Setting 0x105E2A1D is set to 0. This setting is usually 4 which means Restricted usage, it may also be 1 which means Unrestricted usage. The only games where it is 0 are MSFS2024, FIFA 18, Fortnite & Rust.
-#   In the case of restricted usage, Ansel refers to setting 0x100D51F7 which describes the deny list for the shaders. Common values are 'Buffers=(Depth)'.
-#
-#Apply-Patch `
-#    -Name "DRS" `
-#    -Pattern 'GetFreestyleWhitelisted,\{profileName:tt\}\)\}' `
-#    -Replacement 'GetFreestyleWhitelisted,{profileName:tt}).pipe((0,B.T)(r=>(r.freestyleWhitelisted=!0,r)))}'
+    -Pattern 'this\.currentGameChromaInfo=(\w+),this\.currentGameChromaInfo\?\.nvidiaTech\?\.FREESTYLE' `
+    -Replacement 'this.currentGameChromaInfo=$1,$1?.nvidiaTech&&($1.nvidiaTech.FREESTYLE=!0),this.currentGameChromaInfo?.nvidiaTech?.FREESTYLE'
 
 # Write patched content if any patches were applied
 if ($script:patchesApplied -gt 0) {
