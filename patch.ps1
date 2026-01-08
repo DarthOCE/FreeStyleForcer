@@ -22,7 +22,7 @@ function Apply-Patch {
 # Find the app itself, should always be in C:\Program Files\NVIDIA Corporation\NVIDIA App, but just incase..
 $entries = Get-ItemProperty -Path "HKLM:\SOFTWARE\NVIDIA Corporation\Global\NvApp" -ErrorAction SilentlyContinue
 if ($entries.Installed -ne 1) {
-    Write-Host "NVIDIA App not installed" -ForegroundColor Red
+    Write-Host "NVIDIA App is not installed" -ForegroundColor Red
     exit 1
 }
 
@@ -84,5 +84,5 @@ Write-Host "Restart the overlay from NVIDIA App by toggling it on and off" -Fore
 Write-Host "If you want to revert the patches, replace main.js with the .bak file" -Foreground Yellow
 $null = Read-Host "Press ENTER to exit this script"
 
-# The overlay is started with specific parameters by the app, this could work but GPU accel might be off? -- Prompt user instead.
+# The overlay is started with specific parameters by the app, this could work but meh? -- Prompt user instead.
 # Start-Process "$nvidiaApp\CEF\NVIDIA Overlay.exe"
