@@ -12,6 +12,7 @@ The patches are temporary until the Overlay updates or the main.js is changed fo
 
 This may not work if your game is not correctly assigned Ansel rights in DRS, to fix this, download [NVIDIA Profile Inspector](https://github.com/Orbmu2k/nvidiaProfileInspector) and change the following settings:
 
+- "Ansel - Enabled" -> 0x1
 - "Ansel flags for enabled applications" -> 0x1
 - "NVIDIA Predefined Ansel Usage" -> 0x1
 - "Toggle to Enable/Disable Game Filters" -> 0x1
