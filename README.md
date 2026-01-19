@@ -6,6 +6,8 @@ Freestyle is NVIDIA's game filter system that allows applying real-time post-pro
 
 # Running
 
+**Make sure your NVIDIA App is updated to the latest version.**
+
 Open PowerShell as Administrator then run: `irm https://raw.githubusercontent.com/haram/ReallyFreeStyle/refs/heads/main/patch.ps1 | iex`
 
 The patches are temporary until the Overlay updates or the main.js is changed for any reason. In that case, re-run the script.
