@@ -89,10 +89,11 @@ if ($script:patchesApplied -gt 0) {
 Get-Process -Name "NVIDIA Overlay*", "NVIDIA App*" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
 
 Write-Host "`nPlease restart the NVIDIA Overlay / App:" -ForegroundColor Yellow
-Write-Host "  → Open NVIDIA App → toggle Overlay off → wait a few seconds → toggle back on" -ForegroundColor Yellow
+Write-Host "  → Open NVIDIA App → toggle Overlay off → wait a few seconds → toggle back on, then enjoy your game of choice" -ForegroundColor Yellow
 Write-Host "  (or completely restart the NVIDIA App if needed)" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "To undo changes: replace main.*.js with the .bak file" -ForegroundColor Yellow
 Write-Host ""
+
 
 $null = Read-Host "Press ENTER to exit"
