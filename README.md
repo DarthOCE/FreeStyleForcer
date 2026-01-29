@@ -8,8 +8,13 @@ Freestyle is NVIDIA's game filter system that allows applying real-time post-pro
 # Running
 
 **Make sure your NVIDIA App is updated to the latest version.**
+**IF YOU WANT NVIDIA PROFILE PATCHES DONE AUTOMATICALLY**
 
-Open PowerShell as Administrator then run: `irm https://raw.githubusercontent.com/haram/ReallyFreeStyle/refs/heads/main/patch.ps1 | iex`
+Open PowerShell as Administrator then run: `irm https://raw.githubusercontent.com/DarthOCE/FreeStyleForcer/refs/heads/main/patch_ConeGobbla.ps1 | iex`
+
+**IF YOU WANT TO MANUALLY CHANGE THE PROFILE USING PROFILE INSPECTOR**
+
+Open PowerShell as Administrator then run: `irm https://raw.githubusercontent.com/DarthOCE/FreeStyleForcer/refs/heads/main/patch.ps1 | iex`
 
 The patches are temporary until the Overlay updates or the main.js is changed for any reason. In that case, re-run the script.
 
