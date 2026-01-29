@@ -1,4 +1,5 @@
 # Really (Free) Freestyle
+# THIS IS A FORK THAT AUTOMATICALLY APPLIES THE NVIDIA PROFILE INSPECTOR PATCHES WITHOUT THE SOFTWARE
 
 This script patches the NVIDIA Overlay's CEF main.js to bypass Freestyle restrictions imposed by NVIDIA.
 
