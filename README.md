@@ -1,3 +1,4 @@
+# WIP, My patch currently breaks the overlay requiring a NVIDIA App reinstall. Use Profile Inspector Method
 # Really (Free) Freestyle
 # THIS IS A FORK THAT AUTOMATICALLY APPLIES THE NVIDIA PROFILE INSPECTOR PATCHES WITHOUT THE SOFTWARE
 
