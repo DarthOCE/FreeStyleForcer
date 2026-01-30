@@ -12,7 +12,7 @@ Freestyle is NVIDIA's game filter system that allows applying real-time post-pro
 
 Open PowerShell as Administrator then run: `irm https://raw.githubusercontent.com/DarthOCE/FreeStyleForcer/refs/heads/main/patch_ConeGobbla.ps1 | iex`
 
-**IF YOU WANT TO MANUALLY CHANGE THE PROFILE USING PROFILE INSPECTOR**
+# IF YOU WANT TO MANUALLY CHANGE THE PROFILE USING PROFILE INSPECTOR
 
 Open PowerShell as Administrator then run: `irm https://raw.githubusercontent.com/DarthOCE/FreeStyleForcer/refs/heads/main/patch.ps1 | iex`
 
